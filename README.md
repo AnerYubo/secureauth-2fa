@@ -5,7 +5,7 @@
 </div>
 
 <p align="center">
-  <strong>A secure, client-side Two-Factor Authentication (TOTP) manager</strong>
+  <strong>安全的客户端双因素认证 (TOTP) 管理器</strong>
 </p>
 
 <p align="center">
@@ -22,199 +22,199 @@
 
 ---
 
-## ✨ Features
+## ✨ 功能特点
 
-### 🔐 Security-First Design
-- **100% Client-Side**: All data stays in your browser
-- **Local & Session Storage**: Choose where to store your 2FA secrets
-- **File System Storage**: Use File System Access API for encrypted local files
-- **No Server**: Zero knowledge - your secrets never leave your device
+### 🔐 安全优先
+- **100% 客户端运行**: 所有数据均在浏览器中处理
+- **本地与会话存储**: 可选择存储位置
+- **文件系统存储**: 使用 File System Access API 加密本地文件
+- **无服务器**: 零知识 - 您的密钥永远不会离开设备
 
-### 📱 TOTP Support
-- Standard TOTP (Time-based One-Time Password)
-- Configurable period (default: 30 seconds)
-- Support for 6 and 8 digit codes
-- SHA1, SHA256, SHA512 algorithms
+### 📱 TOTP 支持
+- 标准 TOTP（基于时间的一次性密码）
+- 可配置周期（默认：30秒）
+- 支持 6 位和 8 位验证码
+- SHA1、SHA256、SHA512 算法
 
-### 📷 QR Code Integration
-- **Scan QR Codes**: Add accounts by scanning with your camera
-- **Import from Image**: Load QR codes from screenshots
-- **Manual Entry**: Add accounts manually with secret keys
+### 📷 二维码集成
+- **扫描二维码**: 通过摄像头扫描添加账号
+- **图片导入**: 从截图加载二维码
+- **手动输入**: 通过密钥手动添加账号
 
-### 🖼️ Customization
-- **Custom Logos**: Assign icons to each account
-- **Default Logo Library**: Pre-built logos for popular services
-- **Dark/Light Theme**: System-aware theme switching
+### 🖼️ 自定义
+- **自定义图标**: 为每个账号分配图标
+- **默认图标库**: 热门服务预置图标
+- **深色/浅色主题**: 跟随系统主题
 
-### 📦 Batch Operations
-- **Export All**: Backup all accounts to encrypted file
-- **Import Multiple**: Add multiple accounts at once
-- **QR Code Batch Scan**: Scan multiple QR codes in succession
+### 📦 批量操作
+- **导出全部**: 备份所有账号到加密文件
+- **批量导入**: 一次性添加多个账号
+- **连续扫描**: 连续扫描多个二维码
 
 ---
 
-## 🚀 Quick Start
+## 🚀 快速开始
 
-### Prerequisites
+### 环境要求
 
 - Node.js 18+
-- npm or yarn
+- npm 或 yarn
 
-### Installation
+### 安装
 
 ```bash
-# Clone the repository
+# 克隆仓库
 git clone https://github.com/AnerYubo/secureauth-2fa.git
 cd secureauth-2fa
 
-# Install dependencies
+# 安装依赖
 npm install
 ```
 
-### Configuration
+### 配置
 
-Create a `.env.local` file in the project root:
+在项目根目录创建 `.env.local` 文件：
 
 ```bash
-# Optional: Set your Gemini API key for AI features
+# 可选：设置 Gemini API 密钥用于 AI 功能
 GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
-### Run Development Server
+### 运行开发服务器
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+在浏览器中打开 [http://localhost:5173](http://localhost:5173)。
 
-### Build for Production
+### 构建生产版本
 
 ```bash
 npm run build
 ```
 
-The built files will be in the `dist` folder.
+构建后的文件位于 `dist` 文件夹。
 
 ---
 
-## 📖 Usage Guide
+## 📖 使用指南
 
-### Adding an Account
+### 添加账号
 
-1. Click the **+** button
-2. Choose a method:
-   - **Scan QR Code**: Use your camera to scan a QR code
-   - **Enter Manually**: Type the account name and secret key
-3. Optionally add a custom logo
-4. Click **Save**
+1. 点击 **+** 按钮
+2. 选择方式：
+   - **扫描二维码**: 使用摄像头扫描二维码
+   - **手动输入**: 输入账号名称和密钥
+3. 可选择添加自定义图标
+4. 点击 **保存**
 
-### Viewing TOTP Codes
+### 查看 TOTP 验证码
 
-- All accounts display their current 6-digit codes
-- Codes automatically refresh every 30 seconds
-- Click on a code to copy it to clipboard
+- 所有账号显示当前 6 位验证码
+- 验证码每 30 秒自动刷新
+- 点击验证码即可复制到剪贴板
 
-### Exporting/Importing
+### 导入/导出
 
-1. Go to **Settings** (gear icon)
-2. Choose **Export Data** or **Import Data**
-3. For export: choose storage type and set a password
-4. For import: select your backup file and enter password
+1. 进入 **设置**（齿轮图标）
+2. 选择 **导出数据** 或 **导入数据**
+3. 导出时：选择存储类型并设置密码
+4. 导入时：选择备份文件并输入密码
 
-### Storage Modes
+### 存储模式
 
-| Mode | Description |
-|------|-------------|
-| **Local** | Data persists in browser localStorage |
-| **Session** | Data cleared when tab closes |
-| **File** | Data stored in encrypted local file (File System Access API) |
+| 模式 | 说明 |
+|------|------|
+| **本地** | 数据保存在浏览器 localStorage 中 |
+| **会话** | 关闭标签页时清除数据 |
+| **文件** | 数据保存在加密的本地文件中（使用 File System Access API） |
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ 技术栈
 
-- **Framework**: React 19 + TypeScript
-- **Build Tool**: Vite
-- **Icons**: Lucide React
+- **框架**: React 19 + TypeScript
+- **构建工具**: Vite
+- **图标**: Lucide React
 - **TOTP**: otpauth
-- **QR Code**: qrcode.react + jsqr
-- **Encryption**: Web Crypto API
+- **二维码**: qrcode.react + jsqr
+- **加密**: Web Crypto API
 
 ---
 
-## 📁 Project Structure
+## 📁 项目结构
 
 ```
 secureauth-2fa/
-├── components/           # React components
-│   ├── AccountCard.tsx   # Account display card
-│   ├── LockScreen.tsx   # App lock screen
-│   ├── LogoSelect.tsx   # Logo picker
-│   ├── Modals.tsx       # All modal dialogs
-│   ├── QRCodeScanner.tsx # Camera QR scanner
-│   └── Toast.tsx        # Toast notifications
+├── components/           # React 组件
+│   ├── AccountCard.tsx   # 账号卡片
+│   ├── LockScreen.tsx   # 应用锁屏
+│   ├── LogoSelect.tsx   # 图标选择器
+│   ├── Modals.tsx       # 所有弹窗对话框
+│   ├── QRCodeScanner.tsx # 摄像头二维码扫描
+│   └── Toast.tsx        # 提示通知
 ├── lib/
-│   └── google-auth/      # Google Authenticator compatibility
+│   └── google-auth/      # Google Authenticator 兼容性
 ├── service/
-│   └── FileSystemClient.ts # File System Access API wrapper
+│   └── FileSystemClient.ts # File System Access API 封装
 ├── utils/
-│   ├── crypto.ts        # Encryption utilities
-│   ├── db.ts            # Database/storage helpers
-│   ├── defaultLogos.ts  # Default logo library
-│   ├── i18n.ts          # Internationalization
-│   └── qrHelper.ts      # QR code helpers
-├── App.tsx              # Main application
-├── index.tsx            # Entry point
-├── types.ts             # TypeScript types
-└── vite.config.ts       # Vite configuration
+│   ├── crypto.ts        # 加密工具
+│   ├── db.ts            # 数据库/存储助手
+│   ├── defaultLogos.ts  # 默认图标库
+│   ├── i18n.ts          # 国际化
+│   └── qrHelper.ts      # 二维码助手
+├── App.tsx              # 主应用
+├── index.tsx            # 入口文件
+├── types.ts             # TypeScript 类型
+└── vite.config.ts       # Vite 配置
 ```
 
 ---
 
-## 🔒 Security Notes
+## 🔒 安全说明
 
-- All TOTP generation happens locally in your browser
-- Secrets are never sent to any server
-- When using File System storage, files are encrypted with AES-GCM
-- The app uses Web Crypto API for cryptographic operations
+- 所有 TOTP 生成均在浏览器本地完成
+- 密钥不会发送到任何服务器
+- 使用文件系统存储时，文件使用 AES-GCM 加密
+- 应用使用 Web Crypto API 进行加密操作
 
-### Best Practices
+### 最佳实践
 
-1. **Enable App Lock**: Set a password to lock the app
-2. **Regular Backups**: Export your data regularly
-3. **Secure Storage**: Use File System storage for sensitive data
-4. **Clear Session**: Don't use Session storage for permanent accounts
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. **启用应用锁**: 设置密码锁定应用
+2. **定期备份**: 定期导出数据
+3. **安全存储**: 对敏感数据使用文件系统存储
+4. **清除会话**: 永久账号不要使用会话存储
 
 ---
 
-## 📄 License
+## 🤝 贡献
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+欢迎提交 Pull Request！
 
----
-
-## 🙏 Acknowledgments
-
-- [otpauth](https://github.com/hectorm/otpauth) - TOTP implementation
-- [qrcode.react](https://github.com/nicklasfrazer/qrcode.react) - QR code rendering
-- [Lucide](https://lucide.dev) - Beautiful icons
+1. Fork 本仓库
+2. 创建功能分支 (`git checkout -b feature/amazing-feature`)
+3. 提交更改 (`git commit -m 'Add some amazing feature'`)
+4. 推送分支 (`git push origin feature/amazing-feature`)
+5. 打开 Pull Request
 
 ---
 
-## 📷 Screenshots
+## 📄 许可证
+
+本项目基于 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解更多。
+
+---
+
+## 🙏 致谢
+
+- [otpauth](https://github.com/hectorm/otpauth) - TOTP 实现
+- [qrcode.react](https://github.com/nicklasfrazer/qrcode.react) - 二维码渲染
+- [Lucide](https://lucide.dev) - 精美图标
+
+---
+
+## 📷 截图
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" alt="App Screenshot" />
