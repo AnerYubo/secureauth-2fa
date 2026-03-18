@@ -1,0 +1,7 @@
+{
+  "name": "SecureAuth 2FA",
+  "description": "A secure, client-side Two-Factor Authentication (TOTP) manager supporting Local and Session storage, batch operations, and QR code integration.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
