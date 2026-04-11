@@ -24,7 +24,7 @@
 
 ## 🌐 在线演示
 
-**在线访问**: [https://secureauth-2fa-415065818015.us-west1.run.app/](https://silent-paper-03d8.lishaojie0207.workers.dev/)
+**在线访问**: https://silent-paper-03d8.lishaojie0207.workers.dev/
 
 可直接在浏览器中使用，无需本地部署。
 
